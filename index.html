@@ -2,11 +2,20 @@
 <html>
 <head>
   <meta charset="UTF-8">
+
+  <link type="application/json+oembed" href="https://embedl.ink/api/oembed?provider_name=Efreak&provider_url=https://sd.efreakbnc.net/cascade-artists/&author_name=&author_url=">
+  <meta property="og:title" content="Stable Cascade Artists">
+  <meta name="twitter:title" content="Stable Cascade Artists">
+  <meta name="theme-color" content="#000000">
+    <meta name="og:image" content="https://sd.efreakbnc.net/cascade-artists/titles/title.33.webp">
+    <meta name="twitter:image" content="https://sd.efreakbnc.net/cascade-artists/titles/title.33.webp">
+    <meta name="twitter:card" content="summary_large_image">
   <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.2.0">
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+
   <style>
   h1 {
     text-align: center;
@@ -17,11 +26,30 @@
   body {
     background-color: #111;
   }
+  body > h1 {
+    position: relative;
+    height:auto;
+    z-index:-1;
+    margin-bottom:-2em;
+  }
+  body > h1 > div {
+    position:absolute;
+    width:100%;
+    height:auto;
+    z-index:-1;
+  }
+  #titleimg {
+    max-width:100%;
+    max-height:30vh;
+    top: 0;
+    left: 50%;
+  }
+
   </style>
   <title>Stable Cascade Artist Tests</title>
 </head>
 <body>
-  <h1>Stable Cascade Artist Tests</h1>
+  <h1><div>Stable Cascade Artist Tests</div><img id="titleimg" src="https://sd.efreakbnc.net/cascade-artists/titles/title.33.webp" title="title image generated with Stable Cascade"></h1>
   <div id="ngv-cascade-artists" data-nanogallery2='{ "thumbnailWidth": "196", "thumbnailHeight": "196", "thumbnailBorderVertical": 0, "thumbnailBorderHorizontal": 0, "thumbnailDisplayTransitionDuration": 25, "thumbnailLabel": { "position": "onBottom" }, "galleryDisplayMode": "pagination", "galleryMaxRows": 17, "thumbnailAlignment": "center", "thumbnailGutterWidth": 10, "thumbnailGutterHeight": 10, "thumbnailLevelUp": true, "thumbnailOpenImage": true }'>
     <a href="https://cdn.jsdelivr.net/gh/Efreak/cascade-artists@b890d4b4b78bb56c1ce890878933a28756af9f36/images/162_by_a_1_pictures_12.webp" data-ngthumb="https://cdn.jsdelivr.net/gh/Efreak/cascade-artists@b890d4b4b78bb56c1ce890878933a28756af9f36/thumbs/162_by_a_1_pictures_12.webp">A-1 Pictures</a>
     <a href="https://cdn.jsdelivr.net/gh/Efreak/cascade-artists@b890d4b4b78bb56c1ce890878933a28756af9f36/images/259_by_a_j_casson_106.webp" data-ngthumb="https://cdn.jsdelivr.net/gh/Efreak/cascade-artists@b890d4b4b78bb56c1ce890878933a28756af9f36/thumbs/259_by_a_j_casson_106.webp">A J Casson</a>
@@ -1401,5 +1429,8 @@
   <p>I have not (and will not) check if each artist's results actually matches their artwork. I won't bother to find images of their art, either. Many artists are obviously not trained in Cascade (they show geometric patterns) while others are slightly less obvious (Richard Crane produces pictures of cranes) and others aren't obvious at all.</p>
   <p>The following artists were censored by the CSAM filter on AI Horde. This doesn't necessarily mean they're nsfw artists, they could have simply been blurry images or a bad seed for that style. Heavy brushstrokes on oil also tends to get censored. or they could be pictures of children. I'm not checking.<br>Alexei Harlamoff, Andrei Markin, Annick Bouvattier, Bo Bartlett, Casey Baugh, Firmin Baes, Gustave Courbet, He Jiaying, Helene Knoop, J Ottis Adams, John Constable, Moses Soyer, Paul Klee, Raja Ravi Varma, Valentin Rekunenko, Walter Ernest Webster.</p>
   <p>Current total: 1371 images</p>
+<script>
+document.querySelector('#titleimg').src='titles/title.'+(''+(Math.floor(Math.random()*35)+1)).padStart(2,0)+'.webp';
+</script>
 </body>
 </html>
